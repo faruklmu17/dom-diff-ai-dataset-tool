@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign In</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #e0f2ff, #f7f7f7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .card {
+        background: white;
+        padding: 28px;
+        border-radius: 10px;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        width: 340px;
+      }
+      h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+      label {
+        display: block;
+        margin-top: 10px;
+        font-size: 14px;
+      }
+      input {
+        width: 100%;
+        padding: 10px;
+        margin-top: 4px;
+        border-radius: 6px;
+        border: 1px solid #bbb;
+        box-sizing: border-box;
+      }
+      button {
+        margin-top: 18px;
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 999px;
+        background-color: #0066FF;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #004ecc;
+      }
+      .forgot {
+        margin-top: 10px;
+        text-align: right;
+        font-size: 12px;
+      }
+      .forgot a {
+        color: #0066FF;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Welcome Back!</h1>
+      <label for="email">Email</label>
+      <input id="email" type="email" />
+
+      <label for="password">Password</label>
+      <input id="password" type="password" />
+
+      <div class="forgot">
+        <a href="#">Forgot password?</a>
+      </div>
+
+      <button id="signin-btn">Sign In</button>
+    </div>
+  </body>
+</html>

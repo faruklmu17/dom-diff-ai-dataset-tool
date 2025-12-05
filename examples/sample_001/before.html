@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .card {
+        background: white;
+        padding: 24px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        width: 320px;
+      }
+      h1 {
+        font-size: 22px;
+        margin-bottom: 16px;
+      }
+      label {
+        display: block;
+        margin-top: 12px;
+        font-size: 14px;
+      }
+      input {
+        width: 100%;
+        padding: 8px;
+        margin-top: 4px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+      button {
+        margin-top: 16px;
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        background-color: #4285F4;
+        color: white;
+        font-size: 15px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #3367d6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Welcome</h1>
+      <label for="username">Username</label>
+      <input id="username" type="text" />
+
+      <label for="password">Password</label>
+      <input id="password" type="password" />
+
+      <button id="login-btn">Login</button>
+    </div>
+  </body>
+</html>

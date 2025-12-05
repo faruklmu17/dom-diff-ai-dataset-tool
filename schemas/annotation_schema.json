@@ -1,0 +1,56 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "DomDiffAnnotation",
+    "type": "object",
+    "required": [
+      "sample_id",
+      "page_type",
+      "dom_changes",
+      "test_impact_analysis",
+      "new_tests_recommended"
+    ],
+    "properties": {
+      "sample_id": {
+        "type": "string"
+      },
+      "page_type": {
+        "type": "string"
+      },
+      "dom_changes": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["type", "description", "selector"],
+          "properties": {
+            "type": {
+              "type": "string",
+              "description": "Category of DOM change (e.g. text_change, style_change)."
+            },
+            "description": {
+              "type": "string",
+              "description": "Human-readable explanation of the change."
+            },
+            "selector": {
+              "type": "string",
+              "description": "CSS-like selector(s) identifying the changed element(s)."
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "test_impact_analysis": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "new_tests_recommended": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "additionalProperties": false
+  }
+  

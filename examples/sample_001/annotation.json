@@ -1,0 +1,70 @@
+{
+    "sample_id": "sample_001",
+    "page_type": "login",
+    "dom_changes": [
+      {
+        "type": "text_change",
+        "description": "Page title changed from 'Login' to 'Sign In'.",
+        "selector": "head > title"
+      },
+      {
+        "type": "text_change",
+        "description": "Header text changed from 'Welcome' to 'Welcome Back!'.",
+        "selector": "body .card h1"
+      },
+      {
+        "type": "label_change",
+        "description": "Label 'Username' changed to 'Email'.",
+        "selector": "label[for='username'] -> label[for='email']"
+      },
+      {
+        "type": "attribute_change",
+        "description": "Input type changed from 'text' to 'email'.",
+        "selector": "#username -> #email"
+      },
+      {
+        "type": "id_change",
+        "description": "Button ID changed from 'login-btn' to 'signin-btn'.",
+        "selector": "button#login-btn -> button#signin-btn"
+      },
+      {
+        "type": "text_change",
+        "description": "Button text changed from 'Login' to 'Sign In'.",
+        "selector": "button"
+      },
+      {
+        "type": "style_change",
+        "description": "Button background color changed from #4285F4 to #0066FF.",
+        "selector": "button"
+      },
+      {
+        "type": "style_change",
+        "description": "Button padding changed from 10px to 12px.",
+        "selector": "button"
+      },
+      {
+        "type": "layout_change",
+        "description": "Card padding increased and border-radius changed (8px → 10px).",
+        "selector": ".card"
+      },
+      {
+        "type": "element_addition",
+        "description": "New 'Forgot password?' link added below password field.",
+        "selector": ".forgot a"
+      }
+    ],
+    "test_impact_analysis": [
+      "Any test using selector '#login-btn' will fail because the ID changed to '#signin-btn'.",
+      "Tests asserting page title 'Login' or header 'Welcome' will need to be updated to 'Sign In' and 'Welcome Back!'.",
+      "Username-based login tests must be updated to email-based login because the field semantics changed.",
+      "Visual regression tests will detect updated button style, card layout, and background gradient.",
+      "Accessibility tests may need to verify that the email input has correct type and label association."
+    ],
+    "new_tests_recommended": [
+      "Add test to validate email format in the login input field.",
+      "Add test to verify the 'Forgot password?' link is visible and clickable.",
+      "Update existing login flow test to use '#signin-btn' instead of '#login-btn'.",
+      "Add visual regression test to cover rounded button and new card styling."
+    ]
+  }
+  
