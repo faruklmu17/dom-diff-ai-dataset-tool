@@ -1,0 +1,18 @@
+{
+  "sample_id": "sample_002",
+  "page_type": "product_card",
+  "source": "custom_demo_app",
+  "created_by": "faruk-hasan",
+  "created_at_utc": "2025-12-05T00:00:00Z",
+  "dom_version_before": "v1",
+  "dom_version_after": "v2",
+  "change_summary": {
+    "text_changes": 5,
+    "style_changes": 5,
+    "layout_changes": 1,
+    "elements_added": 4,
+    "elements_removed": 0,
+    "attribute_changes": 1
+  }
+}
+

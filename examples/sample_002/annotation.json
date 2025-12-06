@@ -1,0 +1,104 @@
+{
+  "sample_id": "sample_002",
+  "page_type": "product_card",
+  "dom_changes": [
+    {
+      "type": "text_change",
+      "description": "Page title changed from 'Product Details' to 'Product - Wireless Headphones Pro'.",
+      "selector": "head > title"
+    },
+    {
+      "type": "text_change",
+      "description": "Product name changed from 'Wireless Headphones' to 'Wireless Headphones Pro'.",
+      "selector": ".product-name"
+    },
+    {
+      "type": "text_change",
+      "description": "Product price changed from '$99.99' to '$79.99' (sale price).",
+      "selector": ".product-price"
+    },
+    {
+      "type": "text_change",
+      "description": "Product description updated with additional features (battery life).",
+      "selector": ".product-description"
+    },
+    {
+      "type": "text_change",
+      "description": "Stock status changed from 'In Stock' to 'Only 3 left in stock!' with warning icon.",
+      "selector": ".stock-status"
+    },
+    {
+      "type": "element_addition",
+      "description": "New 'HOT DEAL' badge added above product image.",
+      "selector": ".product-badge"
+    },
+    {
+      "type": "element_addition",
+      "description": "New rating section added with 5 stars and review count.",
+      "selector": ".rating"
+    },
+    {
+      "type": "element_addition",
+      "description": "Original price with strikethrough added to show discount.",
+      "selector": ".original-price"
+    },
+    {
+      "type": "element_addition",
+      "description": "New 'Add to Wishlist' button added below main CTA.",
+      "selector": "#wishlist-btn"
+    },
+    {
+      "type": "id_change",
+      "description": "Button ID changed from 'add-to-cart' to 'buy-now-btn'.",
+      "selector": "#add-to-cart -> #buy-now-btn"
+    },
+    {
+      "type": "text_change",
+      "description": "Button text changed from 'Add to Cart' to 'Buy Now'.",
+      "selector": "button.btn-buy-now"
+    },
+    {
+      "type": "style_change",
+      "description": "Button style changed from solid green to gradient purple with rounded pill shape.",
+      "selector": "button"
+    },
+    {
+      "type": "style_change",
+      "description": "Product card border-radius increased from 8px to 12px.",
+      "selector": ".product-card"
+    },
+    {
+      "type": "style_change",
+      "description": "Product image background changed from gray to purple gradient.",
+      "selector": ".product-image"
+    },
+    {
+      "type": "style_change",
+      "description": "Price color changed from dark (#333) to red (#ff6b6b).",
+      "selector": ".product-price"
+    },
+    {
+      "type": "layout_change",
+      "description": "Card width increased from 300px to 320px with more padding.",
+      "selector": ".product-card"
+    }
+  ],
+  "test_impact_analysis": [
+    "Any test using selector '#add-to-cart' will fail because the ID changed to '#buy-now-btn'.",
+    "Tests asserting button text 'Add to Cart' will fail — now reads 'Buy Now'.",
+    "Tests checking product price '$99.99' will fail — price is now '$79.99'.",
+    "Tests asserting 'In Stock' status text will fail due to changed stock messaging.",
+    "Visual regression tests will detect significant UI changes: new badge, rating, gradient backgrounds, pill-shaped buttons.",
+    "Tests verifying only one CTA button will fail — there are now two buttons (Buy Now + Wishlist)."
+  ],
+  "new_tests_recommended": [
+    "Add test to verify 'HOT DEAL' badge is visible when product is on sale.",
+    "Add test to verify original price is displayed with strikethrough when discounted.",
+    "Add test to verify star rating and review count are displayed.",
+    "Add test for 'Add to Wishlist' button functionality.",
+    "Add test to verify low-stock warning appears when inventory is below threshold.",
+    "Update existing 'add to cart' test to use '#buy-now-btn' selector.",
+    "Add visual regression test for new gradient button and card styling."
+  ]
+}
+
