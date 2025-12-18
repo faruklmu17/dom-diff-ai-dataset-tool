@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create Account</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #e6f0ff, #f5f7fa);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .card {
+        background: #ffffff;
+        padding: 28px;
+        width: 360px;
+        border-radius: 10px;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+      }
+
+      h1 {
+        font-size: 24px;
+        margin-bottom: 18px;
+      }
+
+      label {
+        display: block;
+        margin-top: 12px;
+        font-size: 14px;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        margin-top: 4px;
+        border-radius: 6px;
+        border: 1px solid #bbb;
+        box-sizing: border-box;
+      }
+
+      .error {
+        color: #d93025;
+        font-size: 12px;
+        margin-top: 6px;
+      }
+
+      button {
+        margin-top: 20px;
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 999px;
+        background-color: #0066ff;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Create Account</h1>
+
+      <label for="email">Email</label>
+      <input
+        id="email"
+        type="email"
+        aria-required="true"
+        aria-describedby="email-error"
+      />
+      <div id="email-error" class="error" role="alert">
+        Please enter a valid email address
+      </div>
+
+      <label for="password">Password</label>
+      <input
+        id="password"
+        type="password"
+        aria-required="true"
+        minlength="8"
+      />
+
+      <button
+        id="create-btn"
+        aria-label="Create new user account"
+      >
+        Sign Up
+      </button>
+    </div>
+  </body>
+</html>

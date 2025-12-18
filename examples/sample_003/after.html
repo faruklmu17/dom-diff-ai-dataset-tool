@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Account Settings</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f7fa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .card {
+        background: #fff;
+        padding: 24px;
+        width: 380px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      }
+      h1 {
+        font-size: 22px;
+        margin: 0 0 16px 0;
+      }
+      label {
+        display: block;
+        margin-top: 12px;
+        font-size: 14px;
+      }
+      input {
+        width: 100%;
+        padding: 8px;
+        margin-top: 4px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      button {
+        margin-top: 18px;
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        background-color: #4285F4;
+        color: #fff;
+        font-size: 15px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Account Settings</h1>
+
+      <label for="full-name">Full Name</label>
+      <input id="full-name" type="text" />
+
+      <label for="about">About Me</label>
+      <input id="about" type="text" maxlength="160" />
+
+      <button id="update-btn">Update</button>
+    </div>
+  </body>
+</html>
